@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg: #0b1120;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.15);
+  --text: #fff;
+  --secondary: #cbd5e1;
+  --primary: #22c55e;
+  --gold: #fbbf24;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8, 15, 30, 0.75), rgba(8, 15, 30, 0.8)),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, #22c55e33, transparent 30%),
+    radial-gradient(circle at bottom left, #fbbf2433, transparent 35%);
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: var(--secondary);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#themeBtn {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--card);
+  /* backdrop-filter: blur(10px); */
+  color: white;
+  border: 1px solid var(--border);
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+#themeBtn:hover {
+  background: var(--primary);
+  transform: rotate(15deg);
+}
+
+.clock-card,
+.current-prayer,
+.countdown {
+  background: var(--card);
+  /* backdrop-filter: blur(18px); */
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.clock-card {
+  text-align: center;
+}
+
+#clock {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+#date {
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+#hijriDate {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.current-prayer h3,
+.countdown h3 {
+  margin-bottom: 18px;
+  color: var(--secondary);
+}
+
+.current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.current i {
+  font-size: 45px;
+  color: var(--gold);
+}
+
+#currentPrayer {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.countdown {
+  text-align: center;
+}
+
+#countdown {
+  font-size: 3rem;
+  color: var(--primary);
+}
+.prayer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  /* backdrop-filter: blur(18px); */
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card span {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.card i {
+  color: var(--gold);
+  font-size: 22px;
+}
+
+.card h4 {
+  font-size: 2rem;
+  text-align: right;
+}
+
+.active {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+}
+
+.active i,
+.active span,
+.active h4 {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #clock {
+    font-size: 3rem;
+  }
+
+  #countdown {
+    font-size: 2.2rem;
+  }
+
+  .card h4 {
+    font-size: 1.5rem;
+  }
+}

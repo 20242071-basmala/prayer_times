@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Times</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="praystyle.css" />
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <div class="container">
+      <!-- Header -->
+
+      <header>
+        <div>
+          <h1>Prayer Times</h1>
+          <p id="city">
+            <i class="fa-solid fa-location-dot"></i>
+            SA,Riyadh
+          </p>
+        </div>
+
+        <button id="themeBtn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </header>
+
+      <!-- Clock -->
+
+      <section class="clock-card">
+        <h2 id="clock">07:35 PM</h2>
+
+        <p id="date">Monday, July 6, 2026</p>
+
+        <p id="hijriDate">11 Muharram 1448 AH</p>
+      </section>
+
+      <!-- Current Prayer -->
+      <section class="current-prayer">
+        <h3>Current Prayer</h3>
+
+        <div class="current">
+          <i class="fa-solid fa-mosque"></i>
+
+          <span id="currentPrayer"> Maghrib </span>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+
+      <section class="countdown">
+        <h3>Next Prayer In</h3>
+
+        <h2 id="countdown">00 : 00 : 00</h2>
+      </section>
+
+      <!-- Prayer Times -->
+
+      <section class="prayer-grid">
+        <div class="card active">
+          <div>
+            <i class="fa-solid fa-sun"></i>
+            <span>Fajr</span>
+          </div>
+
+          <h4 id="fajr">4.15</h4>
+        </div>
+
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-sun"></i>
+            <span>Sunrise</span>
+          </div>
+
+          <h4 id="sunrise">05:48</h4>
+        </div>
+
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-sun"></i>
+            <span>Dhuhr</span>
+          </div>
+
+          <h4 id="dhuhr">12:58</h4>
+        </div>
+
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span>Asr</span>
+          </div>
+
+          <h4 id="asr">04:33</h4>
+        </div>
+
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-cloud-moon"></i>
+            <span>Maghrib</span>
+          </div>
+
+          <h4 id="maghrib">07:57</h4>
+        </div>
+
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-moon"></i>
+            <span>Isha</span>
+          </div>
+
+          <h4 id="isha">09:26</h4>
+        </div>
+      </section>
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="javapray.js"></script>
+  </body>
+</html>
